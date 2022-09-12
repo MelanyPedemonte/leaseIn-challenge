@@ -19,4 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/search/{searchKey}', [Controller::class, 'search']);
-Route::get('/all', [Controller::class, 'getAllClientes']);
+Route::get('/all', [Controller::class, 'getAllUnidades']);

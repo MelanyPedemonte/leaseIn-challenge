@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Cliente;
-
+use App\Models\Unidades;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -20,10 +20,9 @@ class Controller extends BaseController
         return response()->json($unidades, 200);            
     }
 
-    public function getAllClientes()
+    public function getAllUnidades()
     {
-        $unidades = Cliente::all()->unidades();
-        die($unidades);
+        $unidades = Unidades::with('cliente')->get();
         return response()->json($unidades, 200);            
     }    
 }

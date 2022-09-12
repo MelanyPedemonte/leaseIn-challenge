@@ -26,10 +26,10 @@
           {
             text: 'Cliente',
             align: 'start',
-            value: 'nombre',
+            value: 'cliente.nombre',
           },
           { text: 'Codigo', value: 'codigo', filterable: false},
-          { text: 'Tipo', value: 'tipo',filterable: false, },
+          { text: 'Tipo', value: 'tipo_ua',filterable: false, },
           { text: 'Marca', value: 'marca',filterable: false, },
           { text: 'Procesador', value: 'procesador',filterable: false, },
           { text: 'Generacion', value: 'generacion',filterable: false, },
@@ -39,8 +39,8 @@
     },
     created(){ 
       fetch('/all')
-        .then(response => console.log(response))
-        //.then(json => console.log(json.data));
+        .then(response => response.json())
+        .then(response => this.desserts= response);
         /*
         this.desserts = [{
             nombre: 'Cliente 1',

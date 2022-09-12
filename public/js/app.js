@@ -5320,14 +5320,14 @@ __webpack_require__.r(__webpack_exports__);
       headers: [{
         text: 'Cliente',
         align: 'start',
-        value: 'nombre'
+        value: 'cliente.nombre'
       }, {
         text: 'Codigo',
         value: 'codigo',
         filterable: false
       }, {
         text: 'Tipo',
-        value: 'tipo',
+        value: 'tipo_ua',
         filterable: false
       }, {
         text: 'Marca',
@@ -5346,10 +5346,13 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   created: function created() {
-    fetch('/all').then(function (response) {
-      return console.log(response);
-    }); //.then(json => console.log(json.data));
+    var _this = this;
 
+    fetch('/all').then(function (response) {
+      return response.json();
+    }).then(function (response) {
+      return _this.desserts = response;
+    });
     /*
     this.desserts = [{
         nombre: 'Cliente 1',
