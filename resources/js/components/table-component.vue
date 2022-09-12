@@ -1,20 +1,22 @@
 <template>
-  <v-card>
-    <v-card-title>
-      <v-text-field
-        v-model="search"
-        append-icon="mdi-magnify"
-        label="Search"
-        single-line
-        hide-details
-      ></v-text-field>
-    </v-card-title>
-    <v-data-table
-      :headers="headers"
-      :items="desserts"
-      :search="search"
-    ></v-data-table>
-  </v-card>
+  <v-container>
+    <v-card>
+      <v-card-title>
+        <v-text-field
+          v-model="search"
+          append-icon="mdi-magnify"
+          label="Search"
+          single-line
+          hide-details
+        ></v-text-field>
+      </v-card-title>
+      <v-data-table
+        :headers="headers"
+        :items="desserts"
+        :search="search"
+      ></v-data-table>
+    </v-card>
+  </v-container>
 </template>
 
 <script>
@@ -41,35 +43,6 @@
       fetch('/all')
         .then(response => response.json())
         .then(response => this.desserts= response);
-        /*
-        this.desserts = [{
-            nombre: 'Cliente 1',
-            codigo: 'djcdc',
-            tipo: 'g',
-            marca: 'HP',
-            procesador: '8',
-            generacion: '8'
-
-          },
-          {
-            nombre: 'Cliente 2',
-            codigo: 'djcdc',
-            tipo: 'g',
-            marca: 'HP',
-            procesador: '8',
-            generacion: '8'
-
-          },{
-            nombre: 'Cliente 3',
-            codigo: 'djcdc',
-            tipo: 'tipp',
-            marca: 'HP',
-            procesador: '8',
-            generacion: '8'
-
-          },
-        ]*/
-       
     },
   }
 </script>

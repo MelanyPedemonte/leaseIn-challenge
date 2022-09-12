@@ -13,10 +13,7 @@
     <body>
         <div id="app">
         <v-app app>
-            <v-container>
-            <table-component></table-component>
-                
-            </v-container>
+            <layout-component></layout-component>
         </v-app>
         </div>
     </body>
