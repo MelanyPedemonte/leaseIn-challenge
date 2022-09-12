@@ -8,6 +8,7 @@
 
         <link href="{{ mix('css/app.css') }}" rel="stylesheet" type="text/css" />
         <script defer src="{{ mix('js/app.js') }}"></script>
+        <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
     </head>
     <body>
         <div id="app">

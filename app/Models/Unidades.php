@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Unidades extends Model
 {
+    protected $table = "unidades";
     protected $fillable = [
         'codigo',
         'tipo_ua',
@@ -14,4 +15,9 @@ class Unidades extends Model
         'procesador',
         'generacion',
      ];
+
+     public function cliente()
+    {
+        return $this->belongsTo(Cliente::class, 'cliente_id');
+    }  
 }
