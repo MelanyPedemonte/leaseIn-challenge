@@ -5,7 +5,7 @@
         <v-text-field
           v-model="search"
           append-icon="mdi-magnify"
-          label="Search"
+          label="Buscar Unidades por Cliente"
           single-line
           hide-details
         ></v-text-field>
@@ -14,6 +14,11 @@
         :headers="headers"
         :items="desserts"
         :search="search"
+        :footer-props="{
+           'items-per-page-text' : 'Filas por página',
+           'pageText': '{0}-{1} de {2}'
+        }"
+        no-data-text="No hay datos disponibles"
       ></v-data-table>
     </v-card>
   </v-container>
@@ -29,12 +34,13 @@
             text: 'Cliente',
             align: 'start',
             value: 'cliente.nombre',
+            sortable: true,
           },
-          { text: 'Codigo', value: 'codigo', filterable: false},
-          { text: 'Tipo', value: 'tipo_ua',filterable: false, },
-          { text: 'Marca', value: 'marca',filterable: false, },
-          { text: 'Procesador', value: 'procesador',filterable: false, },
-          { text: 'Generacion', value: 'generacion',filterable: false, },
+          { text: 'Código', value: 'codigo', filterable: false, sortable: true},
+          { text: 'Tipo', value: 'tipo_ua',filterable: false, sortable: true},
+          { text: 'Marca', value: 'marca',filterable: false,sortable: true },
+          { text: 'Procesador', value: 'procesador',filterable: false, sortable: true },
+          { text: 'Generación', value: 'generacion',filterable: false, sortable: true},
         ],
         desserts: [],
       }

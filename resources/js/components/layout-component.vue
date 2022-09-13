@@ -5,10 +5,16 @@
             width="100%"
         >
             <v-toolbar dense>
-                <v-toolbar-title>Lease In - Challenge</v-toolbar-title>
+                <v-img
+                src="/assets/Logo-Leasein.jpg"
+                max-height="40"
+                max-width="110"
+                ></v-img>
+                <v-toolbar-title class="ml-1"> - Challenge</v-toolbar-title>
             </v-toolbar>
         </v-card>
-
-        <table-component></table-component>
+        <div class="d-flex align-center"> 
+            <table-component></table-component>
+        </div>
     </div>
 </template>

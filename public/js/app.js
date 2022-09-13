@@ -5320,27 +5320,33 @@ __webpack_require__.r(__webpack_exports__);
       headers: [{
         text: 'Cliente',
         align: 'start',
-        value: 'cliente.nombre'
+        value: 'cliente.nombre',
+        sortable: true
       }, {
-        text: 'Codigo',
+        text: 'Código',
         value: 'codigo',
-        filterable: false
+        filterable: false,
+        sortable: true
       }, {
         text: 'Tipo',
         value: 'tipo_ua',
-        filterable: false
+        filterable: false,
+        sortable: true
       }, {
         text: 'Marca',
         value: 'marca',
-        filterable: false
+        filterable: false,
+        sortable: true
       }, {
         text: 'Procesador',
         value: 'procesador',
-        filterable: false
+        filterable: false,
+        sortable: true
       }, {
-        text: 'Generacion',
+        text: 'Generación',
         value: 'generacion',
-        filterable: false
+        filterable: false,
+        sortable: true
       }],
       desserts: []
     };
@@ -5385,7 +5391,17 @@ var render = function render() {
     attrs: {
       dense: ""
     }
-  }, [_c("v-toolbar-title", [_vm._v("Lease In - Challenge")])], 1)], 1), _vm._v(" "), _c("table-component")], 1);
+  }, [_c("v-img", {
+    attrs: {
+      src: "/assets/Logo-Leasein.jpg",
+      "max-height": "40",
+      "max-width": "110"
+    }
+  }), _vm._v(" "), _c("v-toolbar-title", {
+    staticClass: "ml-1"
+  }, [_vm._v(" - Challenge")])], 1)], 1), _vm._v(" "), _c("div", {
+    staticClass: "d-flex align-center"
+  }, [_c("table-component")], 1)], 1);
 };
 
 var staticRenderFns = [];
@@ -5413,7 +5429,7 @@ var render = function render() {
   return _c("v-container", [_c("v-card", [_c("v-card-title", [_c("v-text-field", {
     attrs: {
       "append-icon": "mdi-magnify",
-      label: "Search",
+      label: "Buscar Unidades por Cliente",
       "single-line": "",
       "hide-details": ""
     },
@@ -5428,7 +5444,12 @@ var render = function render() {
     attrs: {
       headers: _vm.headers,
       items: _vm.desserts,
-      search: _vm.search
+      search: _vm.search,
+      "footer-props": {
+        "items-per-page-text": "Filas por página",
+        pageText: "{0}-{1} de {2}"
+      },
+      "no-data-text": "No hay datos disponibles"
     }
   })], 1)], 1);
 };
@@ -5520,7 +5541,7 @@ vue__WEBPACK_IMPORTED_MODULE_1__["default"].use((vuetify__WEBPACK_IMPORTED_MODUL
   theme: {
     themes: {
       light: {
-        primary: '#3f51b5',
+        primary: '#ff4500',
         secondary: '#696969',
         accent: '#8c9eff',
         error: '#b71c1c'
