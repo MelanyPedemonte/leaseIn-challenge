@@ -5381,7 +5381,10 @@ var render = function render() {
       _c = _vm._self._c;
 
   return _c("div", {
-    staticClass: "grey lighten-4"
+    staticClass: "grey lighten-4",
+    staticStyle: {
+      height: "100vh"
+    }
   }, [_c("v-card", {
     attrs: {
       flat: "",
@@ -5400,7 +5403,10 @@ var render = function render() {
   }), _vm._v(" "), _c("v-toolbar-title", {
     staticClass: "ml-1"
   }, [_vm._v(" - Challenge")])], 1)], 1), _vm._v(" "), _c("div", {
-    staticClass: "d-flex align-center"
+    staticClass: "d-flex align-center",
+    staticStyle: {
+      height: "93vh"
+    }
   }, [_c("table-component")], 1)], 1);
 };
 

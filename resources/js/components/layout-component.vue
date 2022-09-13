@@ -1,5 +1,5 @@
 <template>
-    <div class="grey lighten-4">
+    <div class="grey lighten-4"  style="height: 100vh;">
         <v-card
             flat
             width="100%"
@@ -13,7 +13,7 @@
                 <v-toolbar-title class="ml-1"> - Challenge</v-toolbar-title>
             </v-toolbar>
         </v-card>
-        <div class="d-flex align-center"> 
+        <div class="d-flex align-center" style="height: 93vh;"> 
             <table-component></table-component>
         </div>
     </div>
